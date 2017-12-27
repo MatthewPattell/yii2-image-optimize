@@ -21,7 +21,7 @@ or add
 
 to the require section of your `composer.json` file.
 
-**WARNING!** Before use this extension, please visit [ImageOptimazer](https://github.com/psliwa/image-optimizer#supported-optimizers) and install optimizers from list in accordance with your OS.
+**WARNING!** Before use this extension, please visit [ImageOptimizer](https://github.com/psliwa/image-optimizer#supported-optimizers) and install optimizers from list in accordance with your OS.
 
 Usage
 -----

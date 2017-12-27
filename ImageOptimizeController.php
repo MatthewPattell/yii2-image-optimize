@@ -40,13 +40,18 @@ class ImageOptimizeController extends Controller
     public $log = false;
 
     /**
+     * @var array
+     */
+    public $optimizerOptions = [];
+
+    /**
      * Optimize images
      *
      * @return void
      */
     public function actionIndex()
     {
-       $optimizeService = new ImageOptimizerService($this->folders, $this->imageExtensions);
+       $optimizeService = new ImageOptimizerService($this->folders, $this->imageExtensions, $this->optimizerOptions);
        $optimizeService->log = $this->log;
        $optimizeService->handle();
     }

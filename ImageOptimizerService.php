@@ -55,10 +55,11 @@ class ImageOptimizerService
      *
      * @param array $folders
      * @param array $imageExtensions
+     * @param array $optimizerOptions
      *
      * @return void
      */
-    public function __construct(array $folders = [], array $imageExtensions = [self::IMAGE_JPG, self::IMAGE_PNG, self::IMAGE_JPEG])
+    public function __construct(array $folders = [], array $imageExtensions = [self::IMAGE_JPG, self::IMAGE_PNG, self::IMAGE_JPEG], array $optimizerOptions = [])
     {
         // Set memory limit
         ini_set('memory_limit', '1024M');
@@ -67,7 +68,7 @@ class ImageOptimizerService
         $this->folders         = $folders;
         $this->imageExtensions = $imageExtensions;
 
-        $factory         = new OptimizerFactory();
+        $factory         = new OptimizerFactory($optimizerOptions);
         $this->optimizer = $factory->get();
     }
 

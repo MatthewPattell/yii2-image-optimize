@@ -23,6 +23,13 @@ to the require section of your `composer.json` file.
 
 **WARNING!** Before use this extension, please visit [ImageOptimizer](https://github.com/psliwa/image-optimizer#supported-optimizers) and install optimizers from list in accordance with your OS.
 
+Install optimizers in Ubuntu:
+```bash
+apt-get install -y libjpeg-progs && \
+apt-get install -y jpegoptim && \
+apt-get install -y pngquant
+```
+
 Usage
 -----
 
